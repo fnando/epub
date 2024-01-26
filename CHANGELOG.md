@@ -11,6 +11,11 @@ Prefix your message with one of the following:
 - [Security] in case of vulnerabilities.
 -->
 
+## v0.0.1 - Jan 25, 2024
+
+- Remove unused dependencies.
+- Fix bug with SecureRandom.
+
 ## v0.0.0 - Jan 25, 2024
 
 - Initial release.
