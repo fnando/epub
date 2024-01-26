@@ -90,6 +90,15 @@ File.open("toc.html", "w") do |file|
 end
 ```
 
+> [!NOTE]
+>
+> Notice that the order of `.html`/`.xhtml` files is important. You need to sort
+> files how you'd like them to show up. If you add `toc.html` lastly, then it'll
+> show up at the end of the ebook.
+>
+> Consider adding files in this order: `cover.html`, `toc.html`, all other html
+> files your epub will have, then other assets (images, css, javascript, etc).
+
 ## Maintainer
 
 - [Nando Vieira](https://github.com/fnando)
