@@ -11,7 +11,7 @@ Prefix your message with one of the following:
 - [Security] in case of vulnerabilities.
 -->
 
-## unreleased
+## v0.0.2 - Jan 25, 2024
 
 - [Changed] Link to single files with just the anchor.
 
