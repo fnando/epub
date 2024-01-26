@@ -49,6 +49,7 @@ module Epub
     def self.extract(files, root_dir:)
       root = Node.new(level: 0, entry: Entry.new(navigation: []))
       current = root
+      single_file = files.size == 1
 
       sections = files.map do |file|
         {
@@ -62,11 +63,13 @@ module Epub
           title = node.text.strip
           level = node.name[1].to_i
 
-          entry = Entry.new(
-            title:,
-            link: "#{section[:path]}##{node.attributes['id']}",
-            navigation: []
-          )
+          link = if single_file
+                   "##{node.attributes['id']}"
+                 else
+                   "#{section[:path]}##{node.attributes['id']}"
+                 end
+
+          entry = Entry.new(title:, link:, navigation: [])
 
           if level > current.level
             current = Node.new(level:, entry:, parent: current)
