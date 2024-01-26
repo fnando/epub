@@ -38,7 +38,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "builder"
   spec.add_dependency "nokogiri"
   spec.add_dependency "rubyzip"
-  spec.add_dependency "thor"
   spec.add_development_dependency "minitest"
   spec.add_development_dependency "minitest-utils"
   spec.add_development_dependency "pry-meta"
