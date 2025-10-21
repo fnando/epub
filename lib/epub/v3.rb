@@ -33,7 +33,7 @@ module Epub
     private def create_epub_file
       FileUtils.rm_rf(output_path)
 
-      Zip::File.open(output_path, Zip::File::CREATE) do |zip|
+      Zip::File.open(output_path, create: true) do |zip|
         # The `mimetype` file must be stored first and it should be
         # uncompressed.
         zip.add_stored("mimetype", config.tmpdir.join("mimetype"))

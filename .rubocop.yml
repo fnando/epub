@@ -8,6 +8,10 @@ AllCops:
   Exclude:
     - vendor/**/*
     - gemfiles/**/*
+
 Naming/FileName:
   Exclude:
     - lib/epub-rb.rb
+
+Gemspec/AttributeAssignment:
+  Enabled: false
